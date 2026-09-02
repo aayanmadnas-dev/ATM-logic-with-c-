@@ -72,6 +72,6 @@ This is an educational/demo project and is not intended for real banking transac
 
 👨‍💻 Author
 
-Your Name
+Aayan Madnas
 
 If you found this project useful, consider giving the repository a ⭐ on GitHub!
