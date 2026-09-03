@@ -1,71 +1,206 @@
-A simple ATM Banking System developed in C++ as a beginner-friendly console application. This project simulates basic ATM operations such as PIN authentication, cash withdrawal, deposit, balance checking, and PIN changing.
+# 🏦 Bank of Indore – ATM Management System
 
-📌 Features
-🔐 PIN Authentication
-💸 Withdraw Money
-💰 Deposit Money
-💳 Check Account Balance
-🔑 Change PIN
-🏦 Simple Bank of Indore ATM interface
-🖥️ Console-based user interaction
-🛠️ Technologies Used
-C++
-iostream
-Standard Input/Output
-⚙️ How It Works
+A simple **ATM Management System written in C++** that demonstrates basic banking operations using **Object-Oriented Programming (OOP)** concepts such as classes, inheritance, and functions.
 
-When the program starts, the user is welcomed to the Bank of Indore ATM and asked to enter their PIN.
+## 📌 Features
 
-After successful authentication, the user can select from the following operations:
+The program currently supports:
 
-Withdraw
-Deposit
-Check Balance
-Change PIN
+* 🔐 **Account Number & PIN Authentication**
+* 💰 **Check Account Balance**
+* 💸 **Withdraw Money**
+* 💵 **Deposit Money**
+* 🔑 **Change PIN**
+* ⚠️ **Wrong Account/PIN Validation**
+* ⚠️ **Wrong Current PIN Validation**
 
-The program then performs the selected operation and displays the updated balance or relevant message.
+## 🛠️ Technologies Used
 
-🚀 How to Run
-1. Clone the repository
-git clone https://github.com/your-username/your-repository-name.git
-2. Open the project folder
-cd your-repository-name
-3. Compile the program
-g++ ATM.cpp -o ATM
-4. Run the program
+* **C++**
+* **Object-Oriented Programming (OOP)**
+* Classes
+* Inheritance
+* Conditional Statements
+* User Input/Output
 
-Windows:
+## 📂 Project Structure
 
-ATM.exe
-
-Linux/macOS:
-
-./ATM
-🔑 Demo PIN
-
-For the current version of the program, the PIN used for authentication is:
-
-1234
-💵 Initial Balance
-
-The program starts with an initial balance of:
-
-₹6000
-📂 Project Structure
-ATM-Banking-System/
+```text
+Bank-of-Indore/
 │
 ├── ATM.cpp
 └── README.md
-🎯 Learning Objectives
+```
 
-This project was created to practice fundamental C++ concepts including:
+## ▶️ How to Run
 
-if-else statements
-User input and output
-Variables and data types
-Conditional logic
-Basic arithmetic operations
-Console-based program design
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/Bank-of-Indore.git
+```
+
+### 2. Open the Project
+
+Open `ATM.cpp` in any C++ IDE or code editor, such as:
+
+* Visual Studio Code
+* Code::Blocks
+* Dev-C++
+* Visual Studio
+
+### 3. Compile the Program
+
+Using a terminal:
+
+```bash
+g++ ATM.cpp -o ATM
+```
+
+### 4. Run
+
+```bash
+./ATM
+```
+
+On Windows:
+
+```bash
+ATM.exe
+```
+
+## 🔐 Login
+
+The current program uses predefined account credentials for testing.
+
+```text
+Account Number: 726815864834
+PIN: 7002
+```
+
+> **Note:** These credentials are hard-coded in the program and are only intended for demonstration/testing purposes.
+
+## 🖥️ Program Flow
+
+```text
+WELCOME TO THE BANK OF INDORE
+            │
+            ▼
+     Enter Account Number
+            │
+            ▼
+          Enter PIN
+            │
+            ▼
+      Verify Credentials
+        /           \
+       /             \
+   Incorrect        Correct
+      │                │
+      ▼                ▼
+ Wrong Details     ATM Menu
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+     Withdraw        Deposit       Check Balance
+        │              │              │
+        └──────────────┼──────────────┘
+                       │
+                       ▼
+                  Change PIN
+```
+
+## 🧩 Classes Used
+
+### `Balance`
+
+Handles the account balance and displays the current balance.
+
+```cpp
+class Balance
+{
+public:
+    int balance;
+
+    void blc()
+    {
+        balance = 10000;
+        cout << "YOUR BALANCE IS " << balance << " RUPEES.";
+    }
+};
+```
+
+### `withdraw`
+
+Inherits from the `Balance` class and performs withdrawal operations.
+
+```cpp
+class withdraw : public Balance
+```
+
+### `Deposit`
+
+Inherits from the `Balance` class and performs deposit operations.
+
+```cpp
+class Deposit : public Balance
+```
+
+### `Changepn`
+
+Handles changing the user's PIN.
+
+```cpp
+class Changepn
+```
+
+## 📚 OOP Concepts Demonstrated
+
+This project is mainly created for learning and demonstrates:
+
+* **Classes & Objects**
+* **Inheritance**
+* **Public Data Members**
+* **Member Functions**
+* **Conditional Statements**
+* **User Input Handling**
+
+## 🚀 Future Improvements
+
+The project can be improved by adding:
+
+* [ ] Persistent account balance
+* [ ] Multiple bank accounts
+* [ ] Multiple users
+* [ ] Transaction history
+* [ ] Withdrawal limit
+* [ ] Insufficient balance checking
+* [ ] PIN masking
+* [ ] PIN change persistence
+* [ ] Account creation
+* [ ] Logout option
+* [ ] Better menu system
+* [ ] File/database storage
+
+## ⚠️ Current Limitations
+
+This is a **beginner-level C++ project**, so some banking functionality is simulated.
+
+For example, the balance is currently initialized to:
+
+```cpp
+balance = 10000;
+```
+
+inside the individual operations. Therefore, deposits and withdrawals do not yet maintain a permanent balance between different transactions.
+
+Similarly, the changed PIN is not saved permanently after the program exits.
+
+## 🎯 Purpose
+
+This project was created as a **C++ learning project** to practice Object-Oriented Programming and build a simple real-world application based on an ATM/banking system.
+
+
 ⚠️ Disclaimer
 
 This is an educational/demo project and is not intended for real banking transactions or secure financial applications.
