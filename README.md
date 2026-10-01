@@ -74,8 +74,8 @@ ATM.exe
 The current program uses predefined account credentials for testing.
 
 ```text
-Account Number: 726815864834
-PIN: 7002
+Account Number: 12345678
+PIN: 1234
 ```
 
 > **Note:** These credentials are hard-coded in the program and are only intended for demonstration/testing purposes.
