@@ -57,9 +57,9 @@ int main()
 {
 	cout<<"WELCOME TO THE BANK OF INDORE"<<endl;
 	long long trueacc;
-	trueacc = 726815864834;
+	trueacc = 12345678;
 	long long truepn;
-	truepn = 7002;
+	truepn = 1234;
 	cout<<"PLEASE ENTER YOUR ACCOUNT NUMBER : "<<endl;
 	long long acc;
 	cin>>acc;
